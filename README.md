@@ -118,7 +118,12 @@ export default App;
 
 - The custom hook ```useIsSignedIn``` determine whether the user is signed in
   - the MGT ```Providers``` keep internally the sign in state
-  
+
+![Sign In](./signin.png)
+
+![Signed In](./signedIn.png)
+
+
 - ```Get``` component (see https://docs.microsoft.com/en-us/graph/toolkit/components/get)
   - Fetch any Microsoft Graph resource if the user is signed in
   - For outlook contacts, the resource is ```me/contacts``` (see https://docs.microsoft.com/en-us/graph/api/user-list-contacts?view=graph-rest-1.0&tabs=http)
@@ -126,3 +131,5 @@ export default App;
   - ```dataChange``` callback can be used to get the result (```detail.error``` or an array of contacts ```detail.response.value```)
   - This component provides also a ```refresh([force = false])``` method to refresh the fetched contacts.
   - Caching the fetched content can also be configured.
+
+![Contacts](./contacts.png)
